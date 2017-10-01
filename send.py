@@ -11,8 +11,8 @@ if (not flag):
     exit(0)
 falg = False
 files = {'file': open(filename, 'rb')}
-password = str(raw_input("Enter password for your file"))
+password = str(raw_input("Enter password for your file "))
 if (password == ""):
     password = "null"
-r = requests.post("http://sharecode.co.nf/server.php?filename="+filename+"&password="+password)
+r = requests.post("http://sharecode.co.nf/server.php?filename="+filename+"&password="+password,files=files)
 print r.text
