@@ -1,10 +1,18 @@
+import os
+import sys
 import requests
-password = str(raw_input("Enter password press enter if no password is required"))
-files = {'file': open('data1.txt', 'rb')}
+filename = sys.argv[1]
+flag = False
+for i in (os.listdir(os.getcwd())):
+    if (i == filename):
+        flag = True
+if (not flag):
+    print filename + " file not found"
+    exit(0)
+falg = False
+files = {'file': open(filename, 'rb')}
+password = str(raw_input("Enter password for your file"))
 if (password == ""):
-    requests.post('http://sharecode.co.nf/server.php',files=files)
-    print "file uploaded"
-else:
-    requests.post('http://sharecode.co.nf/server.php?password='+password,files=files)
-    print "file uploaded"
-    
+    password = "null"
+r = requests.post("http://sharecode.co.nf/server.php?filename="+filename+"&password="+password)
+print r.text
