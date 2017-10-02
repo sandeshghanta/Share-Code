@@ -16,3 +16,4 @@ if (password == ""):
     password = "null"
 r = requests.post("http://sharecode.co.nf/server.php?filename="+filename+"&password="+password,files=files)
 print r.text
+

@@ -1,10 +1,10 @@
 <?php
 	if (isset($_GET['filename']) && isset($_GET['password'])){
-		$host = "fdb14.biz.nf";
-		$username = "2261537_data";
-		$password = "sandeshghanta047";
+		$host = "hiddenduetosecurityreasons";
+		$username = "hiddenduetosecurityreasons";
+		$password = "hiddenduetosecurityreasons";
 		$link = mysqli_connect($host, $username, $password);
-		mysqli_select_db($link,"2261537_data");
+		mysqli_select_db($link,"hiddenduetosecurityreasons");
 		$filename = substr(str_shuffle(str_repeat("0123456789abcdefghijklmnopqrstuvwxyz", 5)), 0, 5);
 		$command = "select * from data where savedname ='".$filename."';";
 		while (mysqli_num_rows(mysqli_query($link,$command)) != 0){
