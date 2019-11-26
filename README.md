@@ -1,4 +1,7 @@
 # Share-Code
+
+[![Join the chat at https://gitter.im/sandeshghanta/Share-Code](https://badges.gitter.im/sandeshghanta/Share-Code.svg)](https://gitter.im/sandeshghanta/Share-Code?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A python script which can be run from the command line to share code with your friends.Presently this works only in Windows
 
 Installation
